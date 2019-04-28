@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Train Schedule Homework</title>
+</head>
+
+<body background="assets/images/cute trains.png">
+
+    <div class="jumbotron">
+        <h1 class="display-4">Your Saved Train Schedules</h1>
+        <p id="hah">Bureau of Non-Safe Farts</p>
+    </div>
+
+    <div class="schedule">
+        <div class="trainsDiv row">
+            <div class="addTrain card col-md-3">
+                <div class="badgePill card-header">
+                    Add New Train Schedule
+                </div>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"></label>
+                        <input type="text" class="form-control" id="trainLine" placeholder="Enter Train Line Here">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1"></label>
+                        <input type="text" class="form-control" id="destinationForm"
+                            placeholder="Enter Destination Here">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"></label>
+                        <input type="text" class="form-control" id="trainTime"
+                            placeholder="Enter Train Time Here - 24h Time">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1"></label>
+                        <input type="text" class="form-control" id="frequencyTime"
+                            placeholder="Enter Frequency of Train Here (min)">
+                    </div>
+                    <!-- <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I Am Human</label>
+                    </div> -->
+                    <br>
+                    <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+            <div class="showTrains col-md-9">
+                <div class="scheduleDiv">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <td>Trainy McTrainy Face</td>
+                                <td>Sunnydale</td>
+                                <td>32</td>
+                                <td>09:30</td>
+                                <td>30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="assets/javascript/schedule.js"></script>
+</body>
+
+</html>

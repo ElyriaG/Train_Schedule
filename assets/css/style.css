@@ -1,0 +1,56 @@
+/* body */
+
+
+/* Header */
+#hah {
+    font-size: 4px;
+}
+
+.jumbotron {
+    background-color: rgb(202, 202, 97);
+    color: rgb(35, 73, 17);
+    text-align: center;
+    height: 200px;
+}
+
+/* New Train Divs */
+.badgePill {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.schedule {
+    display: flex;
+    justify-content: center;
+}
+
+.badge {
+    font-size: 22px;
+}
+
+.trainsDiv {
+    width: 1450px;  
+}
+
+.addTrain {
+    background-color: rgb(184, 163, 137);
+}
+
+
+/* Show Schedule Divs */
+.showTrains {
+    background-color: rgb(105, 105, 76);
+    padding: 30px;
+}
+
+.scheduleDiv {
+    background-color: white;
+    height: 500px;
+}
+
+.table th {
+    background-color: rgb(125, 158, 104) !important;
+}
