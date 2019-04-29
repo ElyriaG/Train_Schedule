@@ -15,7 +15,6 @@ database.ref().on("child_added", childAdded);
 
 function childAdded(child) {
     var val = child.val();
-    console.log(val);
     createRow(val.train, val.destination, val.frequency, val.time);
 }
 
@@ -33,8 +32,8 @@ function submitButtonClicked(event) {
     event.preventDefault();
     var train = $("#trainLine").val();
     var destination = $("#destinationForm").val();
-    var time = $("#trainTime").val();
     var frequency = $("#frequencyTime").val();
+    var time = $("#trainTime").val();
 
     saveRow();
 }
@@ -42,28 +41,30 @@ function submitButtonClicked(event) {
 function createRow(train, destination, frequency, time) {
 
     var row = $("<tr>");
-    var td1 = $("<td>").val(train);
-    var td2 = $("<td>").val(destination);
-    var td3 = $("<td>").val(frequency);
-    var td4 = $("<td>").val(time);
+    var td1 = $("<td>").text(train);
+    var td2 = $("<td>").text(destination);
+    var td3 = $("<td>").text(frequency);
+    // var td4 = $("<td>").text();
 
-    var time = moment(time, "HH:mm");
-    var now = moment();
+    // var time = moment(time, "HH:mm");
+    // var now = moment();
+    // var minutesAway = todayDate.diff(time, "minutes");
+    // td5 = $("<td>").text(minutesAway);
 
-    var todayDate = moment();
-    console.log("TODAY DATE: " + todayDate.format("HH:mm"));
-    console.log("START DATE: " + moment(time).format());
-    console.log("DIFFERENCE: " + todayDate.diff(time, 'minutes'));
+    // var todayDate = moment();
+    // console.log("TODAY DATE: " + todayDate.format("HH:mm"));
+    // console.log("START DATE: " + moment(time).format());
+    // console.log("DIFFERENCE: " + todayDate.diff(time, 'minutes'));
 
     row.append(td1);
     row.append(td2);
     row.append(td3);
-    row.append(td4);
-    row.append(td5);
+    // row.append(td4);
+    // row.append(td5);
 
 
 
-    $("tbody").append(row);
+    $("#tableBody").append(row);
 
     $("#trainLine").val("");
     $("#destinationForm").val("");
